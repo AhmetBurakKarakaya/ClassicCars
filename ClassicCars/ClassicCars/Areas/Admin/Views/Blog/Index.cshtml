@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ClassicCars.Data.Entities.Blog>
+
+@{
+    Layout = "/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Listesi</h2>
+
+<div>
+    <a class="btn btn-primary" href="/Admin/Blog/Create">Blog Ekle</a>
+    <!--@Html.ActionLink("Blog Ekle", "Create", null, new { @class = "btn btn-primary" })-->
+</div>
+
+<hr />
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <th>
+            @Html.DisplayNameFor(b => b.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(b => b.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(b => b.createTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(b => b.IsActive)
+        </th>
+        <th style="width:150px"></th>
+    </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(b => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(b=>item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(b => item.createTime)
+                    </td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <label class="label label-success">IsActive</label>
+                        }
+                        else
+                        {
+                            <label class="label label-danger">IsActive</label>
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-warning btn-sm" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+</table>
+
+

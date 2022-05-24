@@ -1,0 +1,18 @@
+﻿<!-- Section 2 -->
+<div class="wrapper" id="popular">
+    <section class="section-2 target" id="popular-cars">
+        <h1 class="section-heading">Popular Cars</h1>
+        <div class="cards-wrapper center">
+            <div v-for="p in popularCars" class="card">
+                <h2 class="car-name">{{p.name}}</h2>
+                <img v-bind:src="p.tumbnail" class="card-img" />
+                <h3 class="car-price">$  {{ p.price }}</h3>
+                <button type="button" class="card-btn">See More</button>
+            </div>
+            
+        </div>
+    </section>
+</div>
+<!-- End of Section 2 -->
+
+<script src="~/vue/popularCars.js"></script>

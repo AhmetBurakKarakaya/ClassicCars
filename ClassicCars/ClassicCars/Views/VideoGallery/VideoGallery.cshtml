@@ -1,0 +1,22 @@
+﻿<!-- Section 3 -->
+<div class="wrapper">
+    <section class="section-3 target" id="videoGallery">
+        <h1 class="section-heading">Video Gallery</h1>
+        <div class="videos-wrapper center">
+            <video v-for="v in videoGallery" v-bind:src="v.videoUrl"
+            muted
+            loop
+            class="video"></video> 
+        </div>
+        <div class="videos-wrapper center">
+            <video v-for="v in videoGallery2" v-bind:src="v.videoUrl"
+                   muted
+                   loop
+                   class="video"></video>
+        </div>
+    </section>
+</div>
+<!-- End of Section 3 -->
+
+
+<script src="~/vue/videoGallery.js"></script>

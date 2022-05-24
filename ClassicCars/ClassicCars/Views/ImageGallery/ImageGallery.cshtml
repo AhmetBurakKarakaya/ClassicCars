@@ -1,0 +1,20 @@
+﻿ <!-- Section 4 -->
+<div class="wrapper" >
+    <section class="section-4 target" id="imageGallery">
+        <h1 class="section-heading">Image Gallery</h1>
+        <div class="gallery center">
+            <div class="gallery-shelf"></div>
+            <img v-if="imageGallery" v-bind:src="imageGallery[0].tumbnail" class="gallery-img-1" />
+            <img v-if="imageGallery" v-bind:src="imageGallery[1].tumbnail" class="gallery-img-2" />
+            <img v-if="imageGallery" v-bind:src="imageGallery[2].tumbnail" class="gallery-img-3" />
+        </div>
+        <div class="gallery center">
+            <div class="gallery-shelf"></div>
+            <img v-if="imageGallery" v-bind:src="imageGallery[3].tumbnail" class="gallery-img-1" />
+            <img v-if="imageGallery" v-bind:src="imageGallery[4].tumbnail" class="gallery-img-2" />
+            <img v-if="imageGallery" v-bind:src="imageGallery[5].tumbnail" class="gallery-img-3" />
+        </div>
+    </section>
+</div>
+<!-- End of Section 4 -->
+<script src="~/vue/imageGallery.js"></script>

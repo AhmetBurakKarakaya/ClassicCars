@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ClassicCars</title>
+    <link rel="stylesheet" href="~/Content/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Special+Elite&display=swap"
+          rel="stylesheet" />
+    <script src="~/vue/vue.js"></script>
+    <script src="~/axios/axios.js"></script>
+    <script src="~/Content/js/script.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/jquery/jquery.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/jquery-ui/js/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <!-- Menu -->
+        <div class="menu target center">
+            <div class="menu-line menu-line-1"></div>
+            <div class="menu-line menu-line-2"></div>
+        </div>
+        <!-- End of Menu -->
+        <!-- Navbar -->
+        <nav class="navbar target">
+            <a href="/Home/#home" class="navbar-link">Home</a>
+            <a href="/Home/#popular-cars" class="navbar-link">Popular Cars</a>
+            <a href="/Home/#videoGallery" class="navbar-link">Video Gallery</a>
+            <a href="/Home/#imageGallery" class="navbar-link">Image Gallery</a>
+            <a href="/Home/#contact" class="navbar-link">Contact</a>
+            <a href="/Blog/Blog" class="navbar-link">Car Blogs</a>
+        </nav>
+        <!-- End of Navbar -->
+    </header>
+
+    <main>
+        @RenderBody();
+    </main>
+
+    <!--Footer-->
+    <div class="wrapper">
+        <footer class="section target footer">
+            <p class="copyright">Copyright &copy; ABK All Rights Reserved</p>
+        </footer>
+    </div>
+    <!--End of Footer-->
+   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

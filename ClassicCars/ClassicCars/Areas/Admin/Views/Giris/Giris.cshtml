@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-6 offset-md-3" id="girisCtrl">
+    <div class="card my-5">
+        <div class="card-body cardbody-color p-lg-5">
+            <div class="my-2">
+                <h2 class="card-title text-center">
+                    ClassicCars Admin Login
+                </h2>
+            </div>
+            <div class="text-center">
+                <img src="~/Content/images/car-1.jpg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3 p-4"
+                     width="200" alt="profile">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" v-model="giris.Email" name="Email" aria-describedby="emailHelp"
+                       placeholder="E-mail">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" v-model="giris.Parola" name="Parola" placeholder="Şifre">
+            </div>
+            <div class="text-center"><button v-on:click="girisSorgula()" class="btn btn-color px-5 mb-5 w-100">Giriş</button></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/vue/vue.js"></script>
+<script src="~/axios/axios.js"></script>
+<script src="~/vue/giris.js"></script>
